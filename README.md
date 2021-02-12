@@ -28,17 +28,14 @@ A cluster typically has one or more nodes, which are the worker machines that ru
 A Pod represents a single instance of a running process in your cluster. A Pod is a group of one or more containers. You can use a controller, such as a Deployment, which creates and manages Pods for you. The desired state of pods exists in a Deployment yaml file.
 
 ## Service
-A service is used to allow network access to a set of pods. Pods communicate with each other using a service. <br>
+What is a service?<br><br>
 Service types:<br>
 
 | Type  | Description   |
 | ------------------ |-------------|
 | ClusterIP      | The default Kubernetes service. Creates a virtual IP inside the cluster to enable communication between different services. There is no external access. | 
 | LoadBalancer      | Exposes a service to the outside world. The external load balancer is associated with a specific IP address and routes external traffic to a Kubernetes service in your cluster. We'll have to supply our own network load-balancer implementation. 
-| NodePort | An open port on every node of your cluster.|
-
-
-
+| NodePort | Makes the service accessible on a static port on each node in the cluster.|
 
 
 `kubectl get nodes` - check available nodes.
