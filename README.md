@@ -25,10 +25,14 @@ There are multiple platforms that you can try out to run Kubernetes on your loca
 A cluster typically has one or more nodes, which are the worker machines that run your containerized applications and other workloads. In this project it's a single node, the VirtualBox VM.
 
 ## Pods
-A Pod represents a single instance of a running process in your cluster. A Pod is a group of one or more containers. You can use a controller, such as a Deployment, which creates and manages Pods for you. The desired state of pods exists in a Deployment yaml file.
+A Pod represents a single instance of a running process in your cluster. A Pod is a group of one or more containers. You can use a controller, such as a Deployment, which creates and manages Pods for you. The desired state of pods exists in a Deployment yaml file. Pods communicate with each other using a service. 
 
 ## Service
 What is a service?<br><br>
+A service is used to expose your app to the outside world or within your cluster. 
+
+Services allow your applications to receive traffic. Services can be exposed in different ways 
+
 Service types:<br>
 
 | Type  | Description   |
