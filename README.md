@@ -28,6 +28,7 @@ Nodes are the worker machines that run containerized applications and other work
 A Pod represents a single instance of a running process in your cluster and consists of one or more containers. You can use a controller, such as a Deployment, which creates and manages Pods for you.
 
 ## Containers
+All applications run in seperate containers. The container images are built using a Dockerfile and the deployment manifest specifies which image(s) for a pod.
 
 ## Deployment
 A Deployment lets you manage a set of identical pods. The Deployment manifest defines the desired state in which applications or other workloads should be running. 
