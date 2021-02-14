@@ -1,6 +1,10 @@
 # ft_services
-Codam [42 Network] project: set up an infrastructure of different services using Kubernetes.<br>
-Skills: `Network administration` `System administration`
+Codam [42 Network] project: set up an infrastructure of different services using Kubernetes.<br><br>
+Skills:
+* Network administration
+* System administration
+
+<img src="https://raw.githubusercontent.com/nvanwinden/README-img/master/ft_services_0.png" width="800" />
 
 ### Project constraints :warning:
 * The Load Balancer should be the only entry point for the Cluster and can only have a single IP.
@@ -46,4 +50,4 @@ Minikube is a platform to run Kubernetes on your local machine. Minikube runs a 
 :grey_exclamation: Run `eval $(minikube docker-env)` to point your shell to minikube’s docker-daemon. <br>
 :grey_exclamation: Run `minikube addons list` to list all the available addons for Minikube.
 
-- [ ] Fix persistent volume Grafana
+`kubectl exec deploy/grafana -- pkill grafana`
