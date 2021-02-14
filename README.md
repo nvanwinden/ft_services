@@ -30,7 +30,7 @@ A Pod represents a single instance of a running process in your cluster and cons
 ### Deployment
 A Deployment lets you manage a set of identical pods. The Deployment manifest defines the desired state in which applications or other workloads should be running, e.g. which container image should be used and the number of replicas to create. 
 
-## Service
+### Service
 A Service is used to expose your app to the outside world or within your cluster. Services can be exposed in different ways:
 
 | Type  | Description   |
