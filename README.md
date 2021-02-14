@@ -51,4 +51,5 @@ Minikube is a platform to run Kubernetes on your local machine. Minikube runs a 
 :grey_exclamation: Run `eval $(minikube docker-env)` to point your shell to minikube’s docker-daemon. <br>
 :grey_exclamation: Run `minikube addons list` to list all the available addons for Minikube.
 
-`kubectl exec deploy/grafana -- pkill grafana`
+`kubectl exec deploy/grafana -- pkill grafana`<br>
+`curl -I  http://192.168.99.129`
