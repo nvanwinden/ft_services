@@ -1,5 +1,5 @@
 # ft_services
-Codam [42 Network] project: set up an infrastructure of different services using Kubernetes.<br><br>
+Codam [42 Network] project: set up an infrastructure of different services using Kubernetes.
 
 <img src="https://raw.githubusercontent.com/nvanwinden/README-img/master/ft_services_0.png" width="800" />
 
