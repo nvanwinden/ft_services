@@ -11,7 +11,7 @@ Skills: `Network administration` `System administration`
 Read the entire [ft_services subject](https://github.com/nvanwinden/ft_services/blob/main/en.subject.pdf).
 
 ### Requirements
-* A tool that lets you run Kubernetes locally, such as Minikube or Kind :house: <br>
+* A tool that lets you run Kubernetes locally, such as [Minikube](#minikube) or Kind :house: <br>
 * Kubernetes command-line tool `kubectl` :hammer_and_wrench: <br>
 * Virtual Machine, such as Docker or VirtualBox :computer: <br>
 
@@ -24,39 +24,14 @@ A Kubernetes cluster is a set of one or more nodes that run containerized applic
 ### Nodes
 Nodes are the worker machines that run containerized applications and other workloads. In this project we have a single node, the virtual machine our local Kubernetes cluster is running on.
 
-## Pods
-A Pod represents a single instance of a running process in your cluster and consists of one or more containers. You can use a controller, such as a Deployment, which creates and manages Pods for you.
+### Pods
+A Pod represents a single instance of a running process in your cluster and consists of one or more containers. You can use a controller, such as a Deployment, which creates and manages Pods for you. Pods communicate with each other using a service.
 
-## Containers
-All applications run in seperate containers. The container images are built using a Dockerfile and the deployment manifest specifies which image(s) for a pod.
-
-## Deployment
-A Deployment lets you manage a set of identical pods. The Deployment manifest defines the desired state in which applications or other workloads should be running. 
-
-## Replica sets
-This is a feature that looks that the number of specified pods are running at any point in time.
-
-
-
-
-
-### Minikube
-There are multiple platforms that you can try out to run Kubernetes on your local machine. I'm using [Minikube](https://minikube.sigs.k8s.io/docs/start/). Minikube runs a single-node Kubernetes cluster inside a VM. Minikube comes with its own docker daemon. This allows you to run containers inside the Minikube VM. Minikube has several addons available that come in useful for this project. <br><br>
-:grey_exclamation: Run `eval $(minikube docker-env)` to point your shell to minikube’s docker-daemon. <br>
-:grey_exclamation: Run `minikube addons list` to list all the available addons for Minikube.
-
-
-
-
+### Deployment
+A Deployment lets you manage a set of identical pods. The Deployment manifest defines the desired state in which applications or other workloads should be running, e.g. which container image should be used and the number of replicas to create. 
 
 ## Service
-A service is used to expose your app to the outside world or within your cluster. 
-
-Services allow your applications to receive traffic. Services can be exposed in different ways 
-
-Pods communicate with each other using a service. 
-
-Service types:<br>
+A Service is used to expose your app to the outside world or within your cluster. Services can be exposed in different ways:
 
 | Type  | Description   |
 | ------------------ |-------------|
@@ -64,12 +39,11 @@ Service types:<br>
 | LoadBalancer      | Exposes a service to the outside world. The external load balancer is associated with a specific IP address and routes external traffic to a Kubernetes service in your cluster. We'll have to supply our own network load-balancer implementation. 
 | NodePort | Exposes a service via a static port on each node in the cluster.|
 
+---
 
+### Minikube
+Minikube is a platform to run Kubernetes on your local machine. Minikube runs a single-node Kubernetes cluster inside a VM and comes with its own docker daemon. This allows you to run containers inside the Minikube VM. Minikube has several addons available that come in useful for this project. <br><br>
+:grey_exclamation: Run `eval $(minikube docker-env)` to point your shell to minikube’s docker-daemon. <br>
+:grey_exclamation: Run `minikube addons list` to list all the available addons for Minikube.
 
-
-## Persistent Volume Claims
-
-
-`kubectl get nodes` - check available nodes.
-
-Challenge of this project is to find out how to configure all the Docker containers 
+- [ ] Fix persistent volume Grafana
