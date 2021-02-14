@@ -1,10 +1,11 @@
 # ft_services
 Codam [42 Network] project: set up an infrastructure of different services using Kubernetes.<br><br>
-Skills:
-* Network administration
-* System administration
 
 <img src="https://raw.githubusercontent.com/nvanwinden/README-img/master/ft_services_0.png" width="800" />
+
+### Skills
+* Network administration
+* System administration
 
 ### Project constraints :warning:
 * The Load Balancer should be the only entry point for the Cluster and can only have a single IP.
