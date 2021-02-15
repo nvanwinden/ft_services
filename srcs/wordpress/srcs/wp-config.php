@@ -29,7 +29,7 @@ define( 'DB_USER', 'dbuser' );
 define( 'DB_PASSWORD', 'dbpassword' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'mysql-svc:3306' );
+define( 'DB_HOST', 'mysql:3306' );
 
 define('WP_HOME', 'http://192.168.99.129:5050' );
 define('WP_SITEURL', 'http://192.168.99.129:5050' );
