@@ -11,3 +11,11 @@ do
     kubectl delete svc,deployments,pv,pvc,pods,configmaps,role,rolebinding,secret,serviceaccount -l app=$SVC --wait=false
     sleep 3
 done
+
+sleep 10
+
+eval $(minikube docker-env)
+
+sleep 2
+
+echo y | docker system prune -a
