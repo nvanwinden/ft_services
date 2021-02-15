@@ -6,7 +6,7 @@
 #    By: nvan-win <nvan-win@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/01/13 08:38:33 by nvan-win      #+#    #+#                  #
-#    Updated: 2021/02/10 10:15:12 by nvan-win      ########   odam.nl          #
+#    Updated: 2021/02/15 10:24:37 by nvan-win      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,5 +51,8 @@ COPY	/srcs/startup.sh /tmp/startup.sh
 RUN		chmod +x /tmp/startup.sh
 
 EXPOSE 	5050
+
+COPY	srcs/liveness.sh /tmp/
+RUN		chmod +x /tmp/liveness.sh
 
 CMD 	["sh", "-c", "/tmp/startup.sh ; /usr/bin/supervisord -c /etc/supervisord.conf"]

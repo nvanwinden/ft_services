@@ -6,7 +6,7 @@
 #    By: nvan-win <nvan-win@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/01/13 08:38:17 by nvan-win      #+#    #+#                  #
-#    Updated: 2021/02/04 17:38:07 by nvan-win      ########   odam.nl          #
+#    Updated: 2021/02/15 10:22:13 by nvan-win      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,9 @@ RUN		mkdir -p /var/run/nginx
 RUN		wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-english.tar.gz; \
 		tar -zxvf phpMyAdmin-5.0.4-english.tar.gz --strip-components=1 -C /www; \
 		rm phpMyAdmin-5.0.4-english.tar.gz
+
+COPY	srcs/liveness.sh /tmp/
+RUN		chmod +x /tmp/liveness.sh
 
 EXPOSE  5000
 

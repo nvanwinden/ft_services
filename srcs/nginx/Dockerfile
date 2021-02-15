@@ -6,7 +6,7 @@
 #    By: nvan-win <nvan-win@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/01/13 08:38:26 by nvan-win      #+#    #+#                  #
-#    Updated: 2021/02/09 17:55:42 by nvan-win      ########   odam.nl          #
+#    Updated: 2021/02/15 10:21:59 by nvan-win      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,9 @@ RUN		openssl req -x509 -days 365 -newkey rsa:2048 -nodes -sha256 \
 		-subj "/C=NL/ST=NH/L=Amsterdam/O=Codam/CN=nginx-svc"; \
 		chmod 775 /etc/ssl/private/nginx-selfsigned.key; \
 		chmod 775 /etc/ssl/certs/nginx-selfsigned.crt
+
+COPY	srcs/liveness.sh /tmp/
+RUN		chmod +x /tmp/liveness.sh
 
 EXPOSE 	80 443 22
 

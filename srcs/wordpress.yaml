@@ -40,6 +40,14 @@ spec:
         ports:
         - containerPort: 5050
           name: wordpress
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - /tmp/liveness.sh
+          initialDelaySeconds: 10
+          periodSeconds: 5
         volumeMounts:
         - name: www
           mountPath: /www
